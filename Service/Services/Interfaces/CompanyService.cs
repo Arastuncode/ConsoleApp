@@ -34,6 +34,7 @@ namespace Service.Services.Interfaces
         }
         public void Delete(Company company)
         {
+            
              _companyRepository.Delete(company);
         }
         public List<Company> GetByName(string name)

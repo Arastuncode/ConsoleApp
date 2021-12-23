@@ -97,65 +97,47 @@ namespace Company_application.Controls
             {
                 Helper.WriteToConsole(ConsoleColor.Blue, $"{item.Id}.{item.Name}-{item.Adress}.");
             }
-
         }
         public void GetByName()
         {
             Helper.WriteToConsole(ConsoleColor.Cyan, " Add company name:");
-            EnterName: string companyname = Console.ReadLine();
-            string name;
-            bool isTrueName= Company.(companyname, out name);
-            if (isTrueName)
+            string companyname = Console.ReadLine();
+            var companies = _companyService.GetAll();
+            foreach (var item in companies)
             {
-                var company = _companyService.GetByName(name);
-                if (company == null)
-                {
-                    Helper.WriteToConsole(ConsoleColor.Red, " Company not found:");
-                    return;
-                }
-                else
-                {
-                    Helper.WriteToConsole(ConsoleColor.DarkGreen, $" {company.Id}.{company.Name}-{company.Adress}");
-                }
-            }
-            else
-            {
-                Helper.WriteToConsole(ConsoleColor.Red, " Try again for new Name:");
-                goto EnterName;
+                Helper.WriteToConsole(ConsoleColor.Blue, $"{item.Id}.{item.Name}-{item.Adress}.");
             }
         }
         public void Update()
         {
             Helper.WriteToConsole(ConsoleColor.Cyan, " Add company ID:");
-            EnterId: string companyId = Console.ReadLine();
-            int id;
+            EnterId: 
+            string companyId = Console.ReadLine();
             Helper.WriteToConsole(ConsoleColor.Cyan, " Add new company name:");
-            EnterName: string newName = Console.ReadLine();
+            string newName = Console.ReadLine();
             Helper.WriteToConsole(ConsoleColor.Cyan, " Add new company Adress:");
-            string companyAdress = Console.ReadLine();
-            bool isTrueAdress = int.TryParse(companyAdress, out id);
-            if (isTrueAdress)
+            string newAdress = Console.ReadLine();
+            int id;
+            bool isTrueId = int.TryParse(newAdress, out id);
+            if (isTrueId)
             {
-                if (isTrueAdress)
+                if (isTrueId)
                 {
                     Company company = new Company
                     {
                         Name = newName,
-                        Adress = companyAdress,
-                        Id = id
+                        Adress = newAdress
                     };
-                    Company newcompany= _companyService.Update(company, id);
-                    Helper.WriteToConsole(ConsoleColor.DarkGreen, $" {newcompany.Id}.{newcompany.Name}-{newcompany.Adress}");
+                    var newcompany = _companyService.Update(id, company);
+                                        
+                        Helper.WriteToConsole(ConsoleColor.Blue, $"{company.Id}.{company.Name}-{company.Adress} new company created.");
+                    
                 }
-                else
-                {
-                    Helper.WriteToConsole(ConsoleColor.Red, " Try again for new Adress:");
-                    goto EnterName;
-                }
+                
             }
             else
             {
-                Helper.WriteToConsole(ConsoleColor.Red, " Try again for new ID:");
+                Helper.WriteToConsole(ConsoleColor.Red, " Try again for ID:");
                 goto EnterId;
             }
         }
