@@ -23,7 +23,7 @@ namespace Repository.Implementations
                 return false;
             }
         }
-        public Company Get(Predicate<Company> filter = null)
+        public Company GetById(Predicate<Company> filter = null)
         {
             return filter==null ? AppDbContext<Company>.data[0]: AppDbContext<Company>.data.Find(filter);
         }
@@ -31,9 +31,29 @@ namespace Repository.Implementations
         {
             return name==null ? AppDbContext<Company>.data : AppDbContext<Company>.data.FindAll(name);
         }
-        public bool Update(Company entity)
-        {
-            throw new NotImplementedException();
+       public bool Update(Company entity)
+       {
+            try
+            {
+               var company = GetById(x => x.Id == entity.Id);
+               if(company != null)
+               {
+                    company.Name = entity.Name;
+                    company.Adress = entity.Adress;
+                    company.Id = entity.Id;
+                    return true;
+               }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+            
         }
         public bool Delete(Company entity)
         {
@@ -49,9 +69,9 @@ namespace Repository.Implementations
             }
         }
 
-        public List<Company> GetAll(Predicate<Company> filter)
+        public List<Company> GetAll(Predicate<Company> filter=null)
         {
-            throw new NotImplementedException();
+            return filter == null ? AppDbContext<Company>.data : AppDbContext<Company>.data.FindAll(filter);
         }
     }
 

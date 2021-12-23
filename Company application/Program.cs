@@ -9,7 +9,7 @@ namespace Company_application
     class Program
     {
        static void Main(string[] args)
-        {
+       {
             CompanyController companyContoller = new CompanyController();
             Helper.WriteToConsole(ConsoleColor.DarkCyan,"Select options:");
             while (true)
@@ -22,22 +22,23 @@ namespace Company_application
                 {
                     switch (option)
                     {
-                        case(int) MyEnums.Options.CreateCompany:
+                        case(int) MyEnums.Options.CreateCompany://1
                             companyContoller.Create();
                             break;
-                        case (int)MyEnums.Options.UpdateCompany:
+                        case (int)MyEnums.Options.UpdateCompany://2
+                            companyContoller.Update();
                             break;
-                        case (int)MyEnums.Options.DeleteCompany:
+                        case (int)MyEnums.Options.DeleteCompany://3
                             companyContoller.Delete();
                             break;
-                        case (int)MyEnums.Options.GetCompanyById:
+                        case (int)MyEnums.Options.GetCompanyById://4
                             companyContoller.GetById();
                             break;
-                        case (int)MyEnums.Options.GetCompanyByName:
-                            companyContoller.GetById();
+                        case (int)MyEnums.Options.GetAllCompanyByName://5
+                            companyContoller.GetAll();
                             break;
-                        case (int)MyEnums.Options.GetAllCompany:
-                            companyContoller.GetById();
+                        case (int)MyEnums.Options.GetAllCompany://6
+                            companyContoller.GetAll();
                             break;
                     }
                 }
@@ -46,7 +47,7 @@ namespace Company_application
                     goto EnterOption;
                 }
             }
-        }
+       }
         private static  void ShowOptions()
         {
             Helper.WriteToConsole(ConsoleColor.DarkCyan, "1.Create company,2.Update company,3.Delete company,4.Get company by Id,5.Get company by name," +

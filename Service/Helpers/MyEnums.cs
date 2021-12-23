@@ -12,7 +12,7 @@ namespace Service.Helpers
             UpdateCompany=2,
             DeleteCompany=3,
             GetCompanyById=4,
-            GetCompanyByName=5,
+            GetAllCompanyByName=5,//
             GetAllCompany=6,
             CreateEmployee=7,
             UpdateEmployee=8,

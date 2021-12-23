@@ -21,35 +21,28 @@ namespace Service.Services.Interfaces
             _count++;
             return model;
         }
-
-
         public Company GetById(int id)
         {
-            return _companyRepository.Get(x => x.Id == id);
+            return _companyRepository.GetById(x => x.Id == id);
         }
-
-        public List<Company> GetAll()
-        {
-            return _companyRepository.GetAll(null);
-        }
-
         public Company Update(Company model, int id)
         {
-            throw new NotImplementedException();
+            var company = GetById(id);
+            model.Id = company.Id;
+            _companyRepository.Update(company);
+            return model;
         }
         public void Delete(Company company)
         {
              _companyRepository.Delete(company);
         }
-
         public List<Company> GetByName(string name)
         {
             return _companyRepository.GetAll(x => x.Name == name);
         }
-
-        public object GetAll()
+        public List<Company> GetAll()
         {
-            throw new NotImplementedException();
+            return _companyRepository.GetAll();
         }
     }
 }

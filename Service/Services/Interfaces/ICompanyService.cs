@@ -11,6 +11,7 @@ namespace Service.Services.Interfaces
         Company Update(Company model, int id);
         void Delete(Company company);
         Company GetById(int id);
+        List<Company> GetAll();
         List<Company> GetByName(string name);
 
     }
