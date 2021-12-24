@@ -17,7 +17,7 @@ namespace Service.Services.Interfaces
             _employeeRepository = new EmployeeRepository();
             _companyRepository = new CompanyRepository();
         }
-        public Employee Create(Employee model,int companyId)
+        public Employee Create(Employee model,int  companyId)
         {
             try
             {
@@ -35,10 +35,31 @@ namespace Service.Services.Interfaces
                 return null;
             }
         }
+        public Employee GetById(int id)
+        {
+            return _employeeRepository.GetById(x => x.Id == id);
+        }
 
+        public Employee Update(int id, Employee model)
+        {
+            var employee = GetById(id);
+            model.Id = employee.Id;
+            _employeeRepository.Update(model);
+            return model;
+        }
+        //public void Delete(Company employee)
+        //{
 
-
-
+        //    _employeeRepository.Delete(employee);
+        //}
+        //public List<Employee> GetByName(string name)
+        //{
+        //    return _employeeRepository.GetAll(x => x.Name == name);
+        //}
+        //public List<Employee> GetAll()
+        //{
+        //    return _employeeRepository.GetAll();
+        //}
     }
 }
 

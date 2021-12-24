@@ -31,7 +31,7 @@ namespace Repository.Implementations
         {
             return name == null ? AppDbContext<Company>.data : AppDbContext<Company>.data.FindAll(null);
         }
-       public bool Update(Company entity)
+        public bool Update(Company entity)
        {
             try
             {

@@ -38,6 +38,37 @@ namespace Repository.Implementations
 
         public bool Update(Employee entity)
         {
+            try
+            {
+                var employee = GetById(x => x.Id == entity.Id);
+                if (employee != null)
+                {
+                    if (!string.IsNullOrEmpty(entity.Name))
+                        employee.Name = entity.Name;
+                    if (!string.IsNullOrEmpty(entity.Adress))
+                        employee.Adress = entity.Adress;
+                    if (entity.Id != null)
+                        employee.Id = entity.Id;
+                         return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        public Employee GetById(Predicate<Employee> filter = null)
+        {
+            return filter == null ? AppDbContext<Employee>.data[0] : AppDbContext<Employee>.data.Find(filter);
+        }
+        public void Delete(Company employee)
+        {
             throw new NotImplementedException();
         }
     }

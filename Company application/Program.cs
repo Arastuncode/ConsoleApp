@@ -47,6 +47,20 @@ namespace Company_application
                         case (int)MyEnums.Options.UpdateEmployee://8
                             //employeeContoller.Update();
                             break;
+                        case (int)MyEnums.Options.DeleteEmployee://9
+                            //employeeContoller.Create();
+                            break;
+                        case (int)MyEnums.Options.GetEmployeeById://10
+                            employeeContoller.GetById();
+                            break;
+                        case (int)MyEnums.Options.GetEmployeeByAge://11
+                            //employeeContoller.Update();
+                            break;
+                        case (int)MyEnums.Options.GetAllEmployeeByCompanyId://12
+                            //employeeContoller.Update();
+                            break;
+                        
+
 
                     }
                 }

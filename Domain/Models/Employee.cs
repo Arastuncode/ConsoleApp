@@ -12,6 +12,5 @@ namespace Domain.Models
         public string  Adress  { get; set; }
         public string  Name    { get; set; }
         public int     Age     { get; set; }
-        public int    Id       { get; set; }
     }
 }

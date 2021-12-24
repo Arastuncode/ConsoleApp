@@ -8,7 +8,7 @@ using System.Text;
 namespace Company_application.Controls
 {
     public class CompanyController
-    {
+    {        
         private CompanyService _companyService { get; }
         public CompanyController()
         {
@@ -44,15 +44,15 @@ namespace Company_application.Controls
             bool isTrueName = int.TryParse(companyId, out id);
             if (isTrueName)
             {
-                var company1 = _companyService.GetById(id);
-                if (company1 == null)
+                var company = _companyService.GetById(id);
+                if (company == null)
                 {
                     Helper.WriteToConsole(ConsoleColor.Red, " Company not found:");
                     return;
                 }
                 else
                 {
-                    Helper.WriteToConsole(ConsoleColor.DarkGreen, $" {company1.Id}.{company1.Name}-{company1.Adress}");
+                    Helper.WriteToConsole(ConsoleColor.DarkGreen, $" {company.Id}.{company.Name}-{company.Adress}");
                 }
 
             }

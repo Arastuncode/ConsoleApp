@@ -14,10 +14,10 @@ namespace Service.Helpers
             GetCompanyById=4,//
             GetAllCompanyByName=5,//
             GetAllCompany=6,//
-            CreateEmployee=7,
+            CreateEmployee=7,//
             UpdateEmployee=8,
             DeleteEmployee=9,
-            GetEmployeeById=10,
+            GetEmployeeById=10,//
             GetEmployeeByAge=11,
             GetAllEmployeeByCompanyId=12,
         }
