@@ -79,5 +79,9 @@ namespace Repository.Implementations
                 return false;
             }
         }
+        public Employee GetEmployeeByAge(Predicate<Employee> filter = null)
+        {
+            return filter == null ? AppDbContext<Employee>.data[0] : AppDbContext<Employee>.data.Find(filter);
+        }
     }
 }

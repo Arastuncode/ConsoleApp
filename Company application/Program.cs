@@ -54,7 +54,7 @@ namespace Company_application
                             employeeContoller.GetById();
                             break;
                         case (int)MyEnums.Options.GetEmployeeByAge://11
-                            //employeeContoller.Update();
+                            employeeContoller.GetByAge();
                             break;
                         case (int)MyEnums.Options.GetAllEmployeeByCompanyId://12
                             //employeeContoller.Update();
