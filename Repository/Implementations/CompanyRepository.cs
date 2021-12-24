@@ -35,29 +35,16 @@ namespace Repository.Implementations
        {
             try
             {
-               var company = GetById(x => x.Id == entity.Id);
-               if(company != null)
-               {
-                    if(!string.IsNullOrEmpty(entity.Name))
-                       company.Name = entity.Name;
-                    if(!string.IsNullOrEmpty(entity.Adress))
-                        company.Adress = entity.Adress;
-                    if(entity.Id!=null)
-                        company.Id = entity.Id;
-                    return true;
-               }
-                else
-                {
-                    return false;
-                }
+                AppDbContext<Company>.data.Remove(entity);
+                return true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 return false;
             }
-            
-       }
+
+        }
         public bool Delete(Company company)
         {
             try

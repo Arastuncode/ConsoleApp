@@ -55,14 +55,15 @@ namespace Service.Services.Interfaces
         {
             return _employeeRepository.GetAll(x => x.Name == name);
         }
-        public Employee GetByAge(int age)
+        public Employee GetEmployeeByAge(int age)
         {
-            return _employeeRepository.GetById(x => x.Age == age);
+            return _employeeRepository.GetEmployeeByAge(x => x.Age == age);
         }
-        //public List<Employee> GetEmployeeByAge(string age)
-        //{
-        //    return _employeeRepository.GetEmployeeByAge(x=>x.Age=age);
-        //}
+        public List<Employee> GetAll()
+        {
+            return _employeeRepository.GetAll();
+        }
+         
     }
 }
 

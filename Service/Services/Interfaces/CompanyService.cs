@@ -44,7 +44,6 @@ namespace Service.Services.Interfaces
         {
             return _companyRepository.GetAll();
         }
-
         public Company Update(Company model, int id)
         {
             var company = GetById(id);

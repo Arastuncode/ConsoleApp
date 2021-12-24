@@ -28,10 +28,6 @@ namespace Repository.Implementations
         {
             throw new NotImplementedException();
         }
-        public List<Employee> GetAll(Predicate<Employee> filter)
-        {
-            throw new NotImplementedException();
-        }
         public bool Update(Employee entity)
         {
             try
@@ -82,6 +78,10 @@ namespace Repository.Implementations
         public Employee GetEmployeeByAge(Predicate<Employee> filter = null)
         {
             return filter == null ? AppDbContext<Employee>.data[0] : AppDbContext<Employee>.data.Find(filter);
+        }
+        public List<Employee> GetAll(Predicate<Employee> filter = null)
+        {
+            return filter == null ? AppDbContext<Employee>.data : AppDbContext<Employee>.data.FindAll(filter);
         }
     }
 }

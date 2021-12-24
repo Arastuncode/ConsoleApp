@@ -18,7 +18,7 @@ namespace Service.Helpers
             UpdateEmployee=8,//
             DeleteEmployee=9,//
             GetEmployeeById=10,//
-            GetEmployeeByAge=11,
+            GetEmployeeByAge=11,//
             GetAllEmployeeByCompanyId=12,
         }
     }
