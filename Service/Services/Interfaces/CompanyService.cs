@@ -25,11 +25,11 @@ namespace Service.Services.Interfaces
         {
             return _companyRepository.GetById(x => x.Id == id);
         }
-        public Company Update(Company model, int id)
+        public Company Update( int id,Company model)
         {
             var company = GetById(id);
             model.Id = company.Id;
-            _companyRepository.Update(company);
+            _companyRepository.Update(model);
             return model;
         }
         public void Delete(Company company)
@@ -44,6 +44,10 @@ namespace Service.Services.Interfaces
         public List<Company> GetAll()
         {
             return _companyRepository.GetAll();
+        }
+        public Company Update(Company model, int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

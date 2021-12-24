@@ -8,12 +8,12 @@ namespace Service.Helpers
     {
         public enum Options
         {
-            CreateCompany=1,
-            UpdateCompany=2,
-            DeleteCompany=3,
-            GetCompanyById=4,
-            GetAllCompanyByName=5,
-            GetAllCompany=6,
+            CreateCompany=1,//
+            UpdateCompany=2,//
+            DeleteCompany=3,//
+            GetCompanyById=4,//
+            GetAllCompanyByName=5,//
+            GetAllCompany=6,//
             CreateEmployee=7,
             UpdateEmployee=8,
             DeleteEmployee=9,

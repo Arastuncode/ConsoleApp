@@ -79,7 +79,7 @@ namespace Company_application.Controls
                 else
                 {
                     _companyService.Delete(company1);
-                    Helper.WriteToConsole(ConsoleColor.DarkGreen, $"Company successfully deleted");
+                    Helper.WriteToConsole(ConsoleColor.DarkRed, $"Company successfully deleted");
                 }
 
             }
@@ -95,7 +95,7 @@ namespace Company_application.Controls
             var compines = _companyService.GetAll();
             foreach (var item in compines)
             {
-                Helper.WriteToConsole(ConsoleColor.Blue, $"{item.Id}.{item.Name}-{item.Adress}.");
+                Helper.WriteToConsole(ConsoleColor.Yellow, $"{item.Id}.{item.Name}-{item.Adress}.");
             }
         }
         public void GetByName()
@@ -118,22 +118,17 @@ namespace Company_application.Controls
             Helper.WriteToConsole(ConsoleColor.Cyan, " Add new company Adress:");
             string newAdress = Console.ReadLine();
             int id;
-            bool isTrueId = int.TryParse(newAdress, out id);
-            if (isTrueId)
+            bool isIdTrue = int.TryParse(companyId, out id);
+            if (isIdTrue)
             {
-                if (isTrueId)
-                {
-                    Company company = new Company
-                    {
-                        Name = newName,
-                        Adress = newAdress
-                    };
-                    var newcompany = _companyService.Update(id, company);
-                                        
-                        Helper.WriteToConsole(ConsoleColor.Blue, $"{company.Id}.{company.Name}-{company.Adress} new company created.");
+               Company company = new Company
+               {
+                   Name = newName,
+                  Adress = newAdress
+               };
+                 var newcompany = _companyService.Update(id, company); 
+                  Helper.WriteToConsole(ConsoleColor.Blue, $"{company.Id}.{company.Name}-{company.Adress} new company created.");
                     
-                }
-                
             }
             else
             {
@@ -141,5 +136,7 @@ namespace Company_application.Controls
                 goto EnterId;
             }
         }
+         
+
     }
 }

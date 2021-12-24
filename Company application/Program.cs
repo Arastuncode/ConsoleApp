@@ -11,6 +11,7 @@ namespace Company_application
        static void Main(string[] args)
        {
             CompanyController companyContoller = new CompanyController();
+            EmployeeController employeeContoller = new EmployeeController();
             Helper.WriteToConsole(ConsoleColor.DarkCyan,"Select options:");
             while (true)
             {
@@ -35,11 +36,18 @@ namespace Company_application
                             companyContoller.GetById();
                             break;
                         case (int)MyEnums.Options.GetAllCompanyByName://5
-                            companyContoller.GetAll();
+                            companyContoller.GetByName();
                             break;
                         case (int)MyEnums.Options.GetAllCompany://6
                             companyContoller.GetAll();
                             break;
+                        case (int)MyEnums.Options.CreateEmployee://7
+                            employeeContoller.Create();
+                            break;
+                        case (int)MyEnums.Options.UpdateEmployee://8
+                            //employeeContoller.Update();
+                            break;
+
                     }
                 }
                 else
@@ -50,7 +58,7 @@ namespace Company_application
        }
         private static  void ShowOptions()
         {
-            Helper.WriteToConsole(ConsoleColor.DarkCyan, "1.Create company,2.Update company,3.Delete company,4.Get company by Id,5.Get company by name," +
+            Helper.WriteToConsole(ConsoleColor.DarkMagenta, "1.Create company,2.Update company,3.Delete company,4.Get company by Id,5.Get company by name," +
                "6.Get all company," + "7.Create employee,8.Update employee,9.Delete employee ,10.Get employee by Id,11.Get employee by age," +
                "12.Get all employee  by company id ");
         }
