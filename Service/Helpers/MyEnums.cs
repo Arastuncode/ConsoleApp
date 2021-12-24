@@ -15,8 +15,8 @@ namespace Service.Helpers
             GetAllCompanyByName=5,//
             GetAllCompany=6,//
             CreateEmployee=7,//
-            UpdateEmployee=8,
-            DeleteEmployee=9,
+            UpdateEmployee=8,//
+            DeleteEmployee=9,//
             GetEmployeeById=10,//
             GetEmployeeByAge=11,
             GetAllEmployeeByCompanyId=12,

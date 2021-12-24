@@ -58,11 +58,11 @@ namespace Repository.Implementations
             }
             
        }
-        public bool Delete(Company entity)
+        public bool Delete(Company company)
         {
             try
             {
-                AppDbContext<Company>.data.Remove(entity);
+                AppDbContext<Company>.data.Remove(company);
                 return true;
             }
             catch (Exception ex)

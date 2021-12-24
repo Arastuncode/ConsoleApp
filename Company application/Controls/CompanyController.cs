@@ -64,31 +64,13 @@ namespace Company_application.Controls
         }
         public void Delete()
         {
-            Helper.WriteToConsole(ConsoleColor.Cyan, " Add company id:");
-            EnterId: string companyId = Console.ReadLine();
-            int id;
-            bool isTrueId = int.TryParse(companyId, out id);
-            if (isTrueId)
+            Helper.WriteToConsole(ConsoleColor.Cyan, " Add company name:");
+            string companyname = Console.ReadLine();
+            var companies = _companyService.GetAll();
+            foreach (var item in companies)
             {
-                var company1 = _companyService.GetById(id);
-                if (company1 == null)
-                {
-                    Helper.WriteToConsole(ConsoleColor.Red, " Company not found:");
-                    return;
-                }
-                else
-                {
-                    _companyService.Delete(company1);
-                    Helper.WriteToConsole(ConsoleColor.DarkRed, $"Company successfully deleted");
-                }
-
+                Helper.WriteToConsole(ConsoleColor.Blue, $"{item.Id}.{item.Name}-{item.Adress}.");
             }
-            else
-            {
-                Helper.WriteToConsole(ConsoleColor.Red, " Try again for new ID:");
-                goto EnterId;
-            }
-
         }
         public void GetAll()
         {
@@ -117,7 +99,7 @@ namespace Company_application.Controls
             string newName = Console.ReadLine();
             Helper.WriteToConsole(ConsoleColor.Cyan, " Add new company Adress:");
             string newAdress = Console.ReadLine();
-            int id;
+            int  id;
             bool isIdTrue = int.TryParse(companyId, out id);
             if (isIdTrue)
             {
@@ -126,7 +108,7 @@ namespace Company_application.Controls
                    Name = newName,
                   Adress = newAdress
                };
-                 var newcompany = _companyService.Update(id, company); 
+                 var newcompany = _companyService.Update(company,id); 
                   Helper.WriteToConsole(ConsoleColor.Blue, $"{company.Id}.{company.Name}-{company.Adress} new company created.");
                     
             }
@@ -140,3 +122,4 @@ namespace Company_application.Controls
 
     }
 }
+ 

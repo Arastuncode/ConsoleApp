@@ -45,10 +45,10 @@ namespace Company_application
                             employeeContoller.Create();
                             break;
                         case (int)MyEnums.Options.UpdateEmployee://8
-                            //employeeContoller.Update();
+                            employeeContoller.Update();
                             break;
                         case (int)MyEnums.Options.DeleteEmployee://9
-                            //employeeContoller.Create();
+                            employeeContoller.Delete();
                             break;
                         case (int)MyEnums.Options.GetEmployeeById://10
                             employeeContoller.GetById();
@@ -59,9 +59,6 @@ namespace Company_application
                         case (int)MyEnums.Options.GetAllEmployeeByCompanyId://12
                             //employeeContoller.Update();
                             break;
-                        
-
-
                     }
                 }
                 else
