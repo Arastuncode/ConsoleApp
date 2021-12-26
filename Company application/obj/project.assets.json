@@ -69,11 +69,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Company application\\Company application\\Company application.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\ConsoleApp\\Company application\\Company application.csproj",
       "projectName": "Company application",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\Company application\\Company application\\Company application.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\Desktop\\ConsoleApp\\Company application\\Company application.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\Company application\\Company application\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Desktop\\ConsoleApp\\Company application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -94,8 +94,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\Desktop\\Company application\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\Company application\\Service\\Service.csproj"
+            "C:\\Users\\Lenovo\\Desktop\\ConsoleApp\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Desktop\\ConsoleApp\\Service\\Service.csproj"
             }
           }
         }

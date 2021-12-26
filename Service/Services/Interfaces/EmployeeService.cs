@@ -17,13 +17,14 @@ namespace Service.Services.Interfaces
             _employeeRepository = new EmployeeRepository();
             _companyRepository = new CompanyRepository();
         }
-        public Employee Create(Employee model,int  companyId)
+        public Employee Create(Employee model, int companyId)
         {
             try
             {
                 Company company = _companyRepository.Get(x => x.Id == companyId);
-                if (company == null) return null;
-                model.Id =_count;
+                if (company == null) throw new CustomException("Company cannot found");
+
+                model.Id = _count;
                 model.Company = company;
                 _employeeRepository.Create(model);
                 _count++;
@@ -34,10 +35,6 @@ namespace Service.Services.Interfaces
                 Console.WriteLine(ex.Message);
                 return null;
             }
-        }
-        public Employee GetById(int id)
-        {
-            return _employeeRepository.GetById(x => x.Id == id);
         }
         public Employee Update(int id, Employee model)
         {
@@ -51,19 +48,18 @@ namespace Service.Services.Interfaces
             _employeeRepository.Delete(employee);
             
         }
-        public List<Employee> GetByName(string name)
+        public Employee GetById(int id)
         {
-            return _employeeRepository.GetAll(x => x.Name == name);
+            return _employeeRepository.Get(x => x.Id == id);
         }
         public Employee GetEmployeeByAge(int age)
         {
-            return _employeeRepository.GetEmployeeByAge(x => x.Age == age);
+            return _employeeRepository.Get(x => x.Age == age);
         }
-        public List<Employee> GetAll()
+        public List<Employee> GetAllEmployeeByCompanyId(int id)
         {
-            return _employeeRepository.GetAll();
+            return _employeeRepository.GetAll(x => x.Company.Id == id);
         }
-         
     }
 }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dp1WfWi3WxeJDU6hJE13Fiz+CFYZZyIiB7fA9L9dSfVYY0eMzksDgjulZ4D/EBo+x5mtOoXBbpLGLaM5pzW8Rw==",
+  "dgSpecHash": "/SlOC/xbyOQXHU7VB4rPMmoJXbvDwLgTBnIgrGFiJp6T4R5kFKLxGDjKtqYJOD8nHXkv6nvDcfrBXfjZYVQdeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\Company application\\Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\ConsoleApp\\Service\\Service.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

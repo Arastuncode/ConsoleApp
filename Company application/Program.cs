@@ -1,4 +1,5 @@
 ﻿using Company_application.Controls;
+using CompanyApplication.Controllers;
 using Domain.Models;
 using Service.Helpers;
 using Service.Services.Interfaces;
@@ -36,7 +37,7 @@ namespace Company_application
                             companyContoller.GetById();
                             break;
                         case (int)MyEnums.Options.GetAllCompanyByName://5
-                            companyContoller.GetByName();
+                            companyContoller.GetAllByName();
                             break;
                         case (int)MyEnums.Options.GetAllCompany://6
                             companyContoller.GetAll();
@@ -54,10 +55,10 @@ namespace Company_application
                             employeeContoller.GetById();
                             break;
                         case (int)MyEnums.Options.GetEmployeeByAge://11
-                            employeeContoller.GetEmployeeByAge();
+                            employeeContoller.GetByAge();
                             break;
                         case (int)MyEnums.Options.GetAllEmployeeByCompanyId://12
-                            //employeeContoller.Update();
+                            employeeContoller.GetAllByCompanyId();
                             break;
                     }
                 }

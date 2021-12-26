@@ -10,11 +10,14 @@ namespace Repository.Implementations
 {
     public class EmployeeRepository : IRepository<Employee>
     {
+        private EmployeeRepository _employeeRepository { get; }
+        private CompanyRepository _companyRepository { get; }
         public bool Create(Employee entity)
         {
             try
             {
-                if (entity == null) throw new CustomException("Entity is null");
+                if (entity == null)
+                    throw new CustomException("Entity is null");
                 AppDbContext<Employee>.data.Add(entity);
                 return true;
             }
@@ -24,28 +27,23 @@ namespace Repository.Implementations
                 return false;
             }
         }
-        public Employee Get(Predicate<Employee> filter)
-        {
-            throw new NotImplementedException();
-        }
         public bool Update(Employee entity)
         {
             try
             {
-                var employee = GetById(x => x.Id == entity.Id);
+                var employee = Get(x => x.Id == entity.Id);
                 if (employee != null)
                 {
                     if (!string.IsNullOrEmpty(entity.Name))
                         employee.Name = entity.Name;
-                    if (!string.IsNullOrEmpty(entity.SurName))
-                        employee.SurName = entity.SurName;
-                    if (!string.IsNullOrEmpty(entity.Adress))
-                        employee.Adress = entity.Adress;
-                    if (entity.Age!=null)
+
+                    if (!string.IsNullOrEmpty(entity.Surname))
+                        employee.Surname = entity.Surname;
+
+                    if (!string.IsNullOrEmpty(entity.Age.ToString()))
                         employee.Age = entity.Age;
-                    if (entity.Id != null)
-                        employee.Id = entity.Id;
-                         return true;
+
+                    return true;
                 }
                 else
                 {
@@ -57,10 +55,6 @@ namespace Repository.Implementations
                 Console.WriteLine(ex.Message);
                 return false;
             }
-        }
-        public Employee GetById(Predicate<Employee> filter = null)
-        {
-            return filter == null ? AppDbContext<Employee>.data[0] : AppDbContext<Employee>.data.Find(filter);
         }
         public bool Delete(Employee entity)
         {
@@ -75,13 +69,14 @@ namespace Repository.Implementations
                 return false;
             }
         }
-        public Employee GetEmployeeByAge(Predicate<Employee> filter = null)
+        public Employee Get(Predicate<Employee> filter)
         {
             return filter == null ? AppDbContext<Employee>.data[0] : AppDbContext<Employee>.data.Find(filter);
         }
-        public List<Employee> GetAll(Predicate<Employee> filter = null)
+        public List<Employee> GetAll(Predicate<Employee> filter)
         {
             return filter == null ? AppDbContext<Employee>.data : AppDbContext<Employee>.data.FindAll(filter);
+
         }
     }
 }

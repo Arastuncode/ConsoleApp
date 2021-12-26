@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JgwGOMUotEZuJpGvKZn2jsdplFpK3mw0CGajRAuLaoZYXp01Myo6/YTgKQofBsec5FHp2gwiC757AXUod/K5Jg==",
+  "dgSpecHash": "V1nKigDkuGwPiZ1ZQ0NlqikLH9Z+IfUfgRc9jp10cg1WxEpQgUkvFUNKo5CPJ9oMTh0LdNmlfHsQAoqYYYusKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\Company application\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\ConsoleApp\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -7,8 +7,9 @@ namespace Repository.Interfaces
 {
     public interface IRepository<T> where T: BaseEntity
     {
-        bool Create(T entity);
-        bool Update(T entity);
+        public bool Create(T entity);
+        public bool Update(T entity);
+        public bool Delete(T entity);
         T Get(Predicate<T> filter);
         List<T> GetAll(Predicate<T> filter);
     }

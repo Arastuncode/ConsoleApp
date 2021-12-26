@@ -5,6 +5,7 @@ using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
 namespace Repository.Implementations
 {
     public class CompanyRepository : IRepository<Company>
@@ -13,7 +14,8 @@ namespace Repository.Implementations
         {
             try
             {
-                if (entity == null) throw new CustomException("Entity is null");
+                if (entity == null)
+                    throw new CustomException("Entity is null");
                 AppDbContext<Company>.data.Add(entity);
                 return true;
             }
@@ -23,16 +25,8 @@ namespace Repository.Implementations
                 return false;
             }
         }
-        public Company GetById(Predicate<Company> filter = null)
+        public bool Delete(Company entity)
         {
-            return filter==null ? AppDbContext<Company>.data[0]: AppDbContext<Company>.data.Find(filter);
-        }
-        public List<Company> GetByName(string name)
-        {
-            return name == null ? AppDbContext<Company>.data : AppDbContext<Company>.data.FindAll(null);
-        }
-        public bool Update(Company entity)
-       {
             try
             {
                 AppDbContext<Company>.data.Remove(entity);
@@ -43,14 +37,34 @@ namespace Repository.Implementations
                 Console.WriteLine(ex.Message);
                 return false;
             }
-
         }
-        public bool Delete(Company company)
+        public Company Get(Predicate<Company> filter = null)
+        {
+            return filter == null ? AppDbContext<Company>.data[0] : AppDbContext<Company>.data.Find(filter);
+        }
+        public List<Company> GetAll(Predicate<Company> filter)
+        {
+            return filter == null ? AppDbContext<Company>.data : AppDbContext<Company>.data.FindAll(filter);
+        }
+        public bool Update(Company entity)
         {
             try
             {
-                AppDbContext<Company>.data.Remove(company);
-                return true;
+                var company = Get(m => m.Id == entity.Id);
+                if (company != null)
+                {
+                    if (!string.IsNullOrEmpty(entity.Name))
+                        company.Name = entity.Name;
+
+                    if (!string.IsNullOrEmpty(entity.Adress))
+                        company.Adress = entity.Adress;
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch (Exception ex)
             {
@@ -58,15 +72,6 @@ namespace Repository.Implementations
                 return false;
             }
         }
-        public List<Company> GetAll(Predicate<Company> filter=null)
-        {
-            return filter == null ? AppDbContext<Company>.data : AppDbContext<Company>.data.FindAll(filter);
-        }
-        public Company Get(Predicate<Company> filter)
-        {
-            throw new NotImplementedException();
-        }
-    }
 
+    }
 }
- 

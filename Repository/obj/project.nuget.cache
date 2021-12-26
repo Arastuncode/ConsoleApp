@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N5pmw3I88mW+IzRDzq34/nOPXfvq5sYm10YXcLZ3vifL3CqZmJuBwa7XL/CTgAtqtQnTfJ8w+idfKBnMXZKkfA==",
+  "dgSpecHash": "bqRA8TtnR8ymNLYq83hpMeep70ANXEKtmCMns2qxDLEHJviMvZ3nphVLaBD1IsvbIHU0wegGGi/rD5fNT9NJJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\Company application\\Repository\\Repository.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\ConsoleApp\\Repository\\Repository.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

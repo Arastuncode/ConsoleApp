@@ -13,3 +13,33 @@ C:\Users\Lenovo\Desktop\Company application\Service\obj\Debug\netcoreapp3.1\Serv
 C:\Users\Lenovo\Desktop\Company application\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
 C:\Users\Lenovo\Desktop\Company application\Service\obj\Debug\netcoreapp3.1\Service.dll
 C:\Users\Lenovo\Desktop\Company application\Service\obj\Debug\netcoreapp3.1\Service.pdb
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Service.deps.json
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Service.dll
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Service.pdb
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Repository.dll
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.dll
+C:\Users\Lenovo\Desktop\Uni\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.pdb
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Service.deps.json
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Service.dll
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Service.pdb
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Repository.dll
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.dll
+C:\Users\Lenovo\Desktop\ConsoleApp\Service\obj\Debug\netcoreapp3.1\Service.pdb
